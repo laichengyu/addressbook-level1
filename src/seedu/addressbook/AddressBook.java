@@ -379,6 +379,8 @@ public class AddressBook {
             return executeFindPersons(commandArgs);
         case COMMAND_LIST_WORD:
             return executeListAllPersonsInAddressBook();
+        case COMMAND_SORT_WORD:
+            return executeSortAllPersonsInAddressBook();
         case COMMAND_DELETE_WORD:
             return executeDeletePerson(commandArgs);
         case COMMAND_CLEAR_WORD:
