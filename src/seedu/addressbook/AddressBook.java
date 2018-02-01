@@ -22,6 +22,7 @@ import java.util.HashSet;
 import java.util.Optional;
 import java.util.Scanner;
 import java.util.Set;
+import java.util.stream.Collectors;
 
 /*
  * NOTE : =============================================================
@@ -583,6 +584,19 @@ public class AddressBook {
         ArrayList<String[]> toBeDisplayed = getAllPersonsInAddressBook();
         showToUser(toBeDisplayed);
         return getMessageForPersonsDisplayedSummary(toBeDisplayed);
+    }
+
+    /**
+     * Sorts all persons in the full model in alphabetical order.
+     *
+     * @param persons in full model
+     * @return list of persons in full model sorted in alphabetical order
+     */
+    private static ArrayList<String[]> sortAllPersonsAlphabetically(ArrayList<String[]> persons) {
+        ArrayList<String[]> sortedPersonsList = persons.stream()
+                .sorted((person1, person2) -> getNameFromPerson(person1).compareTo(getNameFromPerson(person2)))
+                .collect(Collectors.toCollection(ArrayList::new));
+        return sortedPersonsList;
     }
 
     /**
