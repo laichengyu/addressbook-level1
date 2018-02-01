@@ -41,6 +41,17 @@
   add Esther Potato p/555555 e/esther@notreal.potato
   list
 
+  # to test sort command
+  add Abe Koo p/333333 e/abe@gmail.com
+  list
+
+##########################################################
+# test sort persons command
+##########################################################
+
+  # should match alphabetical order
+  sort
+
 ##########################################################
 # test find persons command
 ##########################################################
