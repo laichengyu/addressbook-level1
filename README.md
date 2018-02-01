@@ -82,7 +82,7 @@ Format: `list`
 
 #### Sort all persons alphabetically: `sort`
 
-> Shows a list of persons, as an indexed list, in alphabetical order.
+> Shows a list of persons, as an indexed list, in alphabetical order. Does not modify order in address book.
 
 Format: `sort`  
 
