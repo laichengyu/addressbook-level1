@@ -586,6 +586,18 @@ public class AddressBook {
     }
 
     /**
+     * Displays all persons in the address book to the user; in alphabetical order.
+     *
+     * @return feedback display message for the operation result
+     */
+    private static String executeSortAllPersonsInAddressBook() {
+        ArrayList<String[]> toBeSorted = getAllPersonsInAddressBook();
+        ArrayList<String[]> toBeDisplayed = sortAllPersonsAlphabetically(toBeSorted);
+        showToUser(toBeDisplayed);
+        return getMessageForPersonsDisplayedSummary(toBeDisplayed);
+    }
+
+    /**
      * Requests to terminate the program.
      */
     private static void executeExitProgramRequest() {
